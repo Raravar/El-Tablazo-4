@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'rest_proveedor',
     'corsheaders',
     'rest_framework.authtoken',
-    
 ]
 
 MIDDLEWARE = [
@@ -76,15 +75,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ElTablazo3.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': '127.0.0.1:1521/orcl',
-        'USER': 'prueba',
+        'NAME': '127.0.0.1:1521/xe',
+        'USER': 'C##prueba',
         'PASSWORD': 'prueba',
         'TEST': {
             'USER': 'default_test',
@@ -132,8 +130,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

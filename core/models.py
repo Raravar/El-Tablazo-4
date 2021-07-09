@@ -1,4 +1,6 @@
 from django.db import models
+from django import forms
+
 # Create your models here.
 
 #Modelo para Proveedor
@@ -7,7 +9,7 @@ class Pais(models.Model):
     idPais = models.IntegerField(primary_key=True, verbose_name="Id de pais")
     nombrePais = models.CharField(max_length=50, verbose_name="Nombre del pais")
 
-    def str(self):
+    def __str__(self):
         return self.nombrePais
 
 class Proveedor(models.Model):
